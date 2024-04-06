@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "FZ2RQVzngxjfJMq5LoipJX8BzZvX7URd4lCVS/01QkIpa+mILcS9WYrKQ17TXD25kkqA70RGXEcOUYQV4lvTtA==",
+  "success": true,
+  "projectFilePath": "C:\\Aneesh\\WebApplications\\Study\\DockerEc2\\DockerEc2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\anees\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.24\\microsoft.windowsdesktop.app.ref.6.0.24.nupkg.sha512",
+    "C:\\Users\\anees\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.24\\microsoft.netcore.app.ref.6.0.24.nupkg.sha512",
+    "C:\\Users\\anees\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.24\\microsoft.aspnetcore.app.ref.6.0.24.nupkg.sha512",
+    "C:\\Users\\anees\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.24\\microsoft.netcore.app.host.win-x64.6.0.24.nupkg.sha512"
+  ],
+  "logs": []
+}
