@@ -21,8 +21,8 @@ jobs:
 
     # Build the Docker image
     - name: Build the Docker image
-      run: docker build -t aneesh3894/dockerec2 .
+      run: docker build -t aneesha95/dockerec2 .
 
     # Push the Docker image
     - name: Push to Dockerhub
-      run: docker push aneesh3894/dockerec2:latest
+      run: docker push aneesha95/dockerec2:latest
