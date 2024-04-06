@@ -1,0 +1,22 @@
+name: CD Pipeline
+
+on:
+  workflow-run:
+  workflows:["CI Pipeline"]
+  type:
+  -completed
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+    - uses: actions/checkout@v3
+
+    # Log in to Docker Hub
+    - name: Pull Docker image from dockerhub
+      run: sudo docker pull aneesha95/dockerec2:latest
+      -name: Delete the old docker conatiner
+      run : sudo docker rm -f dockerec2-container || true
+      -name: Run the docker conatiner
+      run: sudo docker run -d -p 8080:8080 --name dockerec2-container aneesha95/dockerec2
+     
