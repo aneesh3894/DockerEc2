@@ -1,6 +1,8 @@
 ﻿using DockerEc2.Models;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System.Diagnostics;
+using System.Net.Http;
 
 namespace DockerEc2.Controllers
 {
@@ -13,9 +15,17 @@ namespace DockerEc2.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            List<WeatherForecast> forecasts = new List<WeatherForecast>();
+            var client = HttpClientAccessor.HttpClient;
+
+            var response = await client.GetStringAsync("https://localhost:7281/WeatherForecast");
+            forecasts = JsonConvert.DeserializeObject<List<WeatherForecast>>(response)?? new List<WeatherForecast>();
+             
+
+
+            return View(forecasts);
         }
 
         public IActionResult Privacy()

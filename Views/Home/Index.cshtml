@@ -1,10 +1,28 @@
-﻿@{
+﻿@model IEnumerable<WeatherForecast>;
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Deeksha Speech therapy solutions</h1>
-    <p>Sample website to test aws deployment using github</p>
-    <p>running successfully on ci cd pipeline</p>
-    <p>are the changes get reflected correctly</p>
+    <h1 class="display-4">Sample project</h1>
+    <table class="table table-bordered table-responsive table- hover">
+        <tr>
+            <th>Date</th>
+            <th>TemperatureC</th>
+            <th>TemperatureF</th>
+            <th>Summary</th>
+        </tr>
+
+        @foreach (var recipe in Model)
+        {
+            <tr>
+                <td>@recipe.Date</td>
+                <td>@Html.DisplayFor(model => recipe.TemperatureC)</td>
+                <td>@recipe.TemperatureF</td>
+                <td>@recipe.Summary</td>
+            </tr>
+        }
+    </table>
+
 </div>
